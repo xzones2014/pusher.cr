@@ -16,6 +16,19 @@ dependencies:
 
 ```crystal
 require "pusher-client"
+
+
+client = Pusher::Client.new({
+    :app_id    => "app-id",
+    :key       => "your-pusher-key",
+    :secret    => "your-pusher-scret",
+    :cluster   => "your-cluster",
+    :port      => "your-port",
+    :encrypted => "false",
+})
+
+client.trigger(["my-channel"], "my-event", { name: "foo", title: "boo" } )
+
 ```
 
 TODO: Write usage instructions here
