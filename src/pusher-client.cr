@@ -70,10 +70,6 @@ module Pusher
           "&auth_version=" + auth_version +
           "&body_md5=" + body_md5
       auth_signature = OpenSSL::HMAC.hexdigest(:sha256, secret, string_to_sign)
-
-      #  url = "http://api.pusherapp.com/apps/"+ app_id + "/events?auth_key=" + key +  "&auth_timestamp=" + auth_timestamp + "&auth_version=" + auth_version +  "&body_md5=" + body_md5 + "&auth_signature=" + auth_signature
-      # send_sync( url, body )
-      # p url
       send_sync(generate_url(action, body_md5, auth_timestamp, auth_version, auth_signature), body)
     end
 
@@ -118,8 +114,6 @@ module Pusher
           "&auth_version=" + auth_version +
           "&body_md5=" + body_md5 +
           "&auth_signature=" + auth_signature
-
-      # p url
       return url
     end
   end
