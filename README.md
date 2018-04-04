@@ -36,12 +36,11 @@ client.trigger(["my-channel"], "my-event", { name: "foo", title: "boo" } )
 ## Development
 
 TODO: Channels
-GET channels (fetch info for multiple channels)
-
-GET channel (fetch info for one channel)
+1.GET channels (fetch info for multiple channels)
+2.GET channel (fetch info for one channel)
 
 TODO: Users
-GET users
+1.GET users
 
 
 ## Contributing
