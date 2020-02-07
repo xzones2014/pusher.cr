@@ -61,7 +61,7 @@ module Pusher
     def post(action, params)
       body = params
       body_md5 = Digest::MD5.hexdigest(body)
-      auth_timestamp = Time.new.epoch.to_s
+      auth_timestamp = Time.local.to_unix.to_s
       auth_version = "1.0"
       string_to_sign =
         "POST\n/apps/" + app_id +
