@@ -1,6 +1,6 @@
 # pusher-client
 
-Pusher client for crystal language 
+Pusher client for crystal language works with https://pusher.com/ or https://github.com/edgurgel/poxa. 
 
 ## Installation
 
