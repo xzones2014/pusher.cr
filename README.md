@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   pusher-client:
-    github: vusaalab/pusher-client
+    github: vusaalab/pusher.cr
 ```
 
 ## Usage
@@ -22,7 +22,6 @@ client = Pusher::Client.new({
     :app_id    => "app-id",
     :key       => "your-pusher-key",
     :secret    => "your-pusher-scret",
-    :cluster   => "your-cluster",
     :port      => "your-port",
     :encrypted => "false",
 })
