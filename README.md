@@ -1,6 +1,6 @@
 # pusher-client
 
-Pusher client for cystal language
+Pusher client for crystal language 
 
 ## Installation
 
@@ -35,9 +35,14 @@ client.trigger(["my-channel"], "my-event", { name: "foo", title: "boo" } )
 
 ## Development TODO:
 
-1. GET channels (fetch info for multiple channels)
-2. GET channel (fetch info for one channel)
+1. GET channels (fetch multiple channels)
+2. GET channel (fetch channel)
 3. GET users
+4. Batches 
+5. Asynchronous requests
+    pusher.get_async
+    pusher.post_async
+    pusher.trigger_async
 
 ## Contributing
 
@@ -49,4 +54,5 @@ client.trigger(["my-channel"], "my-event", { name: "foo", title: "boo" } )
 
 ## Contributors
 
-- vusaalab(https://github.com/vusaalab) nilanga - creator, maintainer
+- vusaalab(https://github.com/vusaalab) Nilanga - creator, maintainer
+- vince-kyklo(https://github.com/vince-kyklo)
