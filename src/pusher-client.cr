@@ -1,6 +1,7 @@
 require "json"
 require "digest/md5"
 require "openssl/hmac"
+require "openssl/ssl"
 require "http/client"
 
 module Pusher
@@ -75,7 +76,9 @@ module Pusher
 
     def send_sync(url, body)
       begin
-        response = HTTP::Client.post(url, headers: HTTP::Headers{"User-agent" => "pusher", "Content-Type" => "application/json"}, body: body)
+        client = HTTP::Client.new(host, 443, true)
+        client.tls.verify_mode=OpenSSL::SSL::VerifyMode::NONE
+        response = client.post(url, headers: HTTP::Headers{"User-agent" => "pusher", "Content-Type" => "application/json"}, body: body)
       rescue e
         raise e
       end
