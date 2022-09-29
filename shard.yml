@@ -3,7 +3,8 @@ version: 0.1.1
 
 authors:
   - nil <n.sal@kalebr.com>
+  - Abdul Gafur
 
-crystal: 1.0.0
+crystal: 1.5.1
 
 license: MIT
