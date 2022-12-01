@@ -1,7 +1,6 @@
 require "json"
 require "digest/md5"
 require "openssl/hmac"
-require "openssl/ssl"
 require "http/client"
 
 module Pusher
